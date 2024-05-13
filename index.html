@@ -5,8 +5,44 @@
     <meta charset="UTF-8">
     <title>Backbone Todo App</title>
 </head>
-
 <body>
+    <div class="container">
+        <h1 class="text-center" style="padding: 1em;">Backbone Todo App</h1>
+        <div style="max-width: 800px; margin: auto;">
+            <table class="table table-sm mx-auto">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                        <th>Completed</th>
+                    </tr>
+                    <tr>
+                        <td><input class="form-control task-input"></td>
+                        <td><input class="form-control description-input"></td>
+                        <td><button class="btn btn-primary add-task">Add</button></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody class="todos-list">
+                    <script type="text/template" id="todos-list-template">
+                        <td><%= task %></td>
+                        <td><%= description %></td>
+                        <td>
+                            <button class="btn btn-warning edit-task">Edit</button>
+                            <button class="btn btn-danger delete-task">Delete</button>
+                            <button class="btn btn-success update-task" style="display:none">Update</button>
+                            <button class="btn btn-danger cancel" style="display:none">Cancel</button>
+                        </td>
+                    </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
     
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
